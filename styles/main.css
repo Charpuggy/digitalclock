@@ -3,15 +3,70 @@
     padding: 0;
     box-sizing: border-box;
 }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: #333;
+    color: #fff;
+    font-size: 200%;
+    border-bottom: solid 2px white;
+}
+header img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 95%;
+}
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: green;
+    color: whitesmoke;
 }
 .digitalclock {
     display: flex;
     gap: 5px;
     font-size: 300%;
+    margin: 5px 10px;
+}
+.container {
+    border: 2px solid lime;
+    background-color: darkgreen;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 125%;
+}
+@media only screen and (max-width: 767px) {
+    header {
+        font-size: 150%;
+    }
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+    main {  
+        flex-direction: column;
+    }
+    .digitalclock {
+        font-size: 300%;
+        display: block;
+        text-align: center;
+    }
+    #c1, #c2 {
+        display: none;
+    }
+    #hours, #min {
+       border-bottom: #fff 1px solid;
+    }
+
 }
